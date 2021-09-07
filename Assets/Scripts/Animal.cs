@@ -7,6 +7,7 @@ public class Animal : MonoBehaviour
     [SerializeField] float speed;
     [SerializeField] bool movingRight;
     [SerializeField] GameManager gm;
+    [SerializeField] int VidaMax;
 
     float minX, maxX;
     int puntosDeVida = 5;
