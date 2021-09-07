@@ -35,6 +35,18 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void Startlevel2()
+    {
+        SceneManager.LoadScene(2);
+        Time.timeScale = 1;
+    }
+
+    public void Startlevel3()
+    {
+        SceneManager.LoadScene(3);
+        Time.timeScale = 1;
+    }
+
     void PauseGame()
     {
         gamePaused = gamePaused ? false : true;
