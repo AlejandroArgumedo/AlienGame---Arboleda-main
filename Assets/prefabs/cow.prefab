@@ -137,3 +137,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   movingRight: 1
+  gm: {fileID: 0}
+  VidaMax: 1

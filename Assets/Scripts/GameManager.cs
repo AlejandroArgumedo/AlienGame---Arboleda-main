@@ -47,6 +47,12 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    public void Startlevelmenu()
+    {
+        SceneManager.LoadScene(0);
+        Time.timeScale = 1;
+    }
+
     void PauseGame()
     {
         gamePaused = gamePaused ? false : true;

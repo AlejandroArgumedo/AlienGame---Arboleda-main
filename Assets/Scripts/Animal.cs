@@ -11,6 +11,7 @@ public class Animal : MonoBehaviour
 
     float minX, maxX;
     int puntosDeVida = 5;
+    int defensa;
 
     // Start is called before the first frame update
     void Start()
@@ -54,8 +55,13 @@ public class Animal : MonoBehaviour
         
         if(collision.gameObject.CompareTag("Disparo") )
         {
-            gm.ReducirNumEnemigos();
-            Destroy(this.gameObject);
+            defensa++;
+
+            if (defensa == VidaMax)
+            {
+                gm.ReducirNumEnemigos();
+                Destroy(this.gameObject);
+            }
         }
     }
 
