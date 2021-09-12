@@ -75,6 +75,8 @@ public class Spaceship : MonoBehaviour
             Instantiate(bala, disparador.transform.position, transform.rotation);
             nextFire = Time.time + fireRate;
         }
+
+
     }
 
     void MoverNave()

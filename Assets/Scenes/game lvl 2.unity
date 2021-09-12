@@ -2884,6 +2884,10 @@ PrefabInstance:
       propertyPath: numEnemies
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 2400782505422468359, guid: 776007b32233b427bb65e0254f83837b, type: 3}
+      propertyPath: TiempoCongelado
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 776007b32233b427bb65e0254f83837b, type: 3}
 --- !u!1 &1682579270

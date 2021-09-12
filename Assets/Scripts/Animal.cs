@@ -10,9 +10,7 @@ public class Animal : MonoBehaviour
     [SerializeField] int VidaMax;
 
     float minX, maxX;
-    int puntosDeVida = 5;
     int defensa;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -53,7 +51,7 @@ public class Animal : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
-        if(collision.gameObject.CompareTag("Disparo") )
+        if(collision.gameObject.CompareTag("Disparo") && Time.timeScale == 1)
         {
             defensa++;
 
@@ -62,6 +60,12 @@ public class Animal : MonoBehaviour
                 gm.ReducirNumEnemigos();
                 Destroy(this.gameObject);
             }
+        }
+
+        if(collision.gameObject.CompareTag("Disparo") && Time.timeScale == 0.5)
+        {
+            gm.ReducirNumEnemigos();
+            Destroy(this.gameObject);
         }
     }
 

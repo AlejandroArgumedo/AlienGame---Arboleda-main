@@ -11,6 +11,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject pauseUI;
     [SerializeField] GameObject gameOverUI;
     [SerializeField] int numEnemies;
+    [SerializeField] float TiempoCongelado;
+
+    float congelar = 0;
+    bool CambiarTiempo = true;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +30,9 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P) && gameOver == false)
             PauseGame();
 
+        if (CambiarTiempo)
+            Ralentizar();
+         
         
     }
 
@@ -79,5 +86,20 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0;
         player.gamePaused = true;
         gameOverUI.SetActive(true);
+    }
+
+    void Ralentizar()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftShift) && Time.time >= congelar)
+        {
+            Time.timeScale = 0.5f;
+
+            congelar = Time.time + (TiempoCongelado/2);
+        }
+
+        if(Time.time >= congelar)
+        {
+            Time.timeScale = 1;
+        }
     }
 }
