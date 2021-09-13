@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] int numEnemies;
     [SerializeField] float TiempoCongelado;
 
+    int cargasDeRalentizador = 0;
     float congelar = 0;
     bool CambiarTiempo = true;
 
@@ -90,11 +91,13 @@ public class GameManager : MonoBehaviour
 
     void Ralentizar()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift) && Time.time >= congelar)
+        if (Input.GetKeyDown(KeyCode.LeftShift) && Time.time >= congelar && cargasDeRalentizador < 3)
         {
             Time.timeScale = 0.5f;
 
             congelar = Time.time + (TiempoCongelado/2);
+
+            cargasDeRalentizador++;
         }
 
         if(Time.time >= congelar)

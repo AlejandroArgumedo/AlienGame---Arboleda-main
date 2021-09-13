@@ -8,10 +8,10 @@ public class Spaceship : MonoBehaviour
     [SerializeField] GameObject bala;
     [SerializeField] GameObject balaRafaga;
     [SerializeField] GameObject disparador;
-
+    [SerializeField] int balasEnRafaga;
     [SerializeField] float fireRate;
-    
 
+    int conteoRafagas = 0;
     float minX, maxX, minY, maxY;
     float nextFire = 0;
     float nextRafaga = 0;
@@ -64,6 +64,15 @@ public class Spaceship : MonoBehaviour
         {
             Instantiate(balaRafaga, disparador.transform.position, transform.rotation);
             nextRafaga = Time.time + (fireRate/3);
+
+            conteoRafagas++;
+        }
+
+        if( conteoRafagas== balasEnRafaga)
+        {
+            nextRafaga += balasEnRafaga;
+
+            conteoRafagas = 0;
         }
         
     }

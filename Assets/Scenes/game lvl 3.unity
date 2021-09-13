@@ -1387,7 +1387,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -4
   m_Sprite: {fileID: 21300000, guid: 9ed8d3f74d13f489e825ef36de77e2ee, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.56078434, g: 0.41568628, b: 0.59607846, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1656,6 +1656,7 @@ MonoBehaviour:
   bala: {fileID: 5935567074204406622, guid: e2cef46308f9b44ccaf3d9e14f97782e, type: 3}
   balaRafaga: {fileID: 5935567074204406622, guid: ee936ef7cfeac42a98d98fe8e2df23c6, type: 3}
   disparador: {fileID: 1682579270}
+  balasEnRafaga: 8
   fireRate: 0.5
   gamePaused: 0
 --- !u!1 &748031313
@@ -3241,7 +3242,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -4
   m_Sprite: {fileID: 21300000, guid: 9ed8d3f74d13f489e825ef36de77e2ee, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5606775, g: 0.41211286, b: 0.5943396, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
